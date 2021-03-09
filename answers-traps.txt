@@ -1,0 +1,19 @@
+1-Which registers contain arguments to functions? For example, which register holds 13 in main's call to printf? 
+a2 holds 13 and a1 holds 12 so all the as from a0 to a7 and from fa0 to fa7 that stores the function arguments in code a0, a1, a2
+
+
+
+2-Where is the call to function f in the assembly code for main? Where is the call to g? (Hint: the compiler may inline functions.) 
+f was directly optimized during compilation and loaded in a1, that goes for the g as well as it they are inline functions
+
+3-At what address is the function printf located? 
+aupic makes the pc+immidiate besides ra which is zeros and shifts it left by 12 and then put it all in ra
+jalr jumps to the return address which is 1552+ra which is 0x610+0x30=0x640
+
+
+4-What value is in the register ra just after the jalr to printf in main? 
+pc+4 to be able to return back to the original that is 34+4=38
+
+5-HE110 World, bigendian 0x726c6400 , we don't need to change the integer 
+
+6-every time the y will give a different number because i didn't give him a specific number to be printed so it prints the number given in a2
